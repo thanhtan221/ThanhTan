@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+     <td><input type="text" id = "a"></td>
+     <td><input type="text" id = "b"></td>
+    </table>
+    <table>
+        <td><button onclick="addition()">addition(+)</button></td>
+        <td><button onclick="subtraction()">subtraction(-)</button></td>
+        <td><button onclick="multiplication()">multiplication(*)</button></td>
+        <td><button onclick="division()">division(/)</button></td>
+    </table>
+</body>
+</html>
+<script>
+    function addition()
+         {
+        let c = Number(document.getElementById("a").value);
+        let d =Number(document.getElementById("b").value);
+       alert(c+d);
+     }
+     function subtraction()
+         {
+        let c = Number(document.getElementById("a").value);
+        let d =Number(document.getElementById("b").value);
+       alert(c-d);
+     }
+     function multiplication()
+         {
+        let c = Number(document.getElementById("a").value);
+        let d =Number(document.getElementById("b").value);
+       alert(c*d);
+     }
+     function division()
+         {
+        let c = Number(document.getElementById("a").value);
+        let d =Number(document.getElementById("b").value);
+       alert(c/d);
+     }
+
+       
+</script>
