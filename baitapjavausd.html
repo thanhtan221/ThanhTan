@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table >
+        <tr style="width: 80%; height: 20px;">
+             <th style="width: 40%; height: 20px;">Amount</th>
+             <th style="width: 40%; height: 20px;">from curency</th>
+             <th style="width: 40%; height: 20px;">To Currency</th>
+        </tr>
+        <tr>
+            <th><input type="text" id="xuat"></th>
+            <th><select id="dauvao">
+                <option value="vietnam">vietnam</option>
+                <option value="Mỹ">Mỹ</option>
+            <th><select id="daura">
+                <option value="23000">USD</option>
+                <option value="30000">EUR</option>
+            <td><button onclick="nhatnut()">convert</button></td>
+            </select></th>
+            </select></th>
+            </tr>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function nhatnut() {
+    let c = document.getElementById("xuat").value;
+    let a = document.getElementById("dauvao").value;
+    let b = document.getElementById ("daura").value;
+    if (a == b){
+        alert(c);
+    }
+    if (a == "vietnam" && b == "23000")
+      alert(c/23000);
+    }
+
+
+</script>
