@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <img id="myImage" src="/cautruclap.html/th.jfif" style="width : 300px">
+        <p> Click</p>
+        <input type="button" value="Ckick Me" onclick="moveright();"/>
+    </form>
+</body>
+</html>
+ <script>
+     var Press = null;  
+       Press = document.getElementById('myImage');
+       function init() {
+           Press = document.getElementById('myImage');
+           Press.style.position = 'relative ';
+           Press.style.left = '0px'
+
+       }
+       function moveright() {
+           Press.style.left = parseInt(Press.style.left)+ 10 + 'px'
+       }
+       window.onload = init;
+
+ </script>
