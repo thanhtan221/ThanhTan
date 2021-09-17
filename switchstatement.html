@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><input type="text" id="tinh"></td>
+            <td><button type="button" onclick="nhannut()">Tính Số Ngày</button></td>
+        </tr>
+        <!-- <tr>
+            <td><input type="text" id=" tinh1 "></td>
+            <td><button onclick="myFunction1()">Tính Số Ngày</button> </td>
+        </tr> -->
+    </table>
+</body>
+
+</html>
+<script>
+    function nhannut() {
+        var thangs = document.getElementById("tinh").value;
+        var thanhs = parseInt(thangs);
+        var  ngay = 0;
+        switch (thanhs) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            ngay = 31;
+            document.write("Tháng" + "&nbsp" + thanhs + '&nbsp' + "có" + '&nbsp' + ngay + '&nbsp' + "ngày");
+                break;
+            case 2:
+            ngay = 29
+            document.write("Tháng" + "&nbsp" + thanhs + '&nbsp' + "có" + '&nbsp' + ngay + '&nbsp' + "ngày");
+            
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+            ngay = 30
+            document.write("Tháng" + "&nbsp" + thanhs + '&nbsp' + "có" + '&nbsp' + ngay + '&nbsp' + "ngày");
+            
+                break;
+
+        }
+    }
+</script>

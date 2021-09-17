@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+
+</head>
+
+<body>
+    <div id="bmibox"></div>
+    <div id="msgbox"></div>
+    <h1>Calculate Your Body Mass Index </h1>
+    <label for="">Enter Your Weight <span>(in Kg)</span> </label>
+    <br>
+    <input type="number" name="" id="weight">
+    <br>
+    <label for="">Enter Your Height <span>(in meter)</span> </label>
+    <br>
+    <input type="number" name="" id="height">
+    <br>
+
+    <input type="submit" value="Check Result" id="submit" onclick="BMICalc()">
+</body>
+
+</html>
+<script>
+    function BMICalc() {
+        var weight = parseFloat(document.querySelector("#weight").value);
+        var height = parseFloat(document.querySelector("#height").value);
+        var bmi = weight / (height * height);
+        bmi = parseFloat(bmi).toFixed(4);
+        if (bmi < 18.5) {
+            document.getElementById("bmibox").innerHTML = bmi;
+            document.getElementById("msgbox").innerHTML =
+                "Your BMI is " + bmi + " , so you are underweight!";
+            document.getElementById("msgbox").style.color = "yellow";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            document.getElementById("bmibox").innerHTML = bmi;
+            document.getElementById("msgbox").innerHTML =
+                "Your BMI is " + bmi + " , so you have normal BMI!";
+            document.getElementById("msgbox").style.color = "green";
+        } else if (bmi >= 25 && bmi < 29.9) {
+            document.getElementById("bmibox").innerHTML = bmi;
+            document.getElementById("msgbox").innerHTML =
+                "Your BMI is " + bmi + " , so you are overweight!";
+            document.getElementById("msgbox").style.color = "red";
+        } else {
+            document.getElementById("bmibox").innerHTML = bmi;
+            document.getElementById("msgbox").innerHTML =
+                "Your BMI is " + bmi + " , so you are suffering from obesity!";
+            document.getElementById("msgbox").style.color = "maroon";
+        }
+    }
+</script>
